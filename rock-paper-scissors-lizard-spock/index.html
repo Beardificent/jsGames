@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- Font Source -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
     <title>Rock, Paper, Scissors, Charmander, Spock</title>
 </head>
 <body>
@@ -20,12 +20,15 @@
     <input type="image" id="charmander" class="button" src="assets/lizard.png" width="100" height="100"></input>
     <input type="image" id="spock" class="button" src="assets/spock.png" width="100" height="100"></input>
 </div>
-
+<div class="scoreboard">
+    <div id='playerScore'>0</div>
+    <div id='computerScore'>0</div>
+</div>
 <div class="response" id="playerChoice"></div>
 <div class="response" id="cpuChoice"></div>
 <div class="response" id="result"></div>
 
-<!--Bootstrap Script-->
+
 <script src="index.js"></script>
 </body>
 </html>

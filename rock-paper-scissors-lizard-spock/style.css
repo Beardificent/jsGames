@@ -24,9 +24,10 @@ body {
 #playerChoice {
   color: azure;
   word-spacing: 5px;
-  font-size: 16px;
-  font-family: "Happy Monkey", cursive;
+  font-size: 20px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   font-weight: 800;
+  text-align: center;
   float: left;
   display: inline-block;
   width: 45%;
@@ -38,9 +39,10 @@ body {
 #cpuChoice {
   color: azure;
   word-spacing: 5px;
-  font-size: 16px;
-  font-family: "Happy Monkey", cursive;
+  font-size: 20px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   font-weight: 800;
+  text-align: center;
   display: inline-block;
   float: right;
   width: 45%;
@@ -52,9 +54,10 @@ body {
 #result {
   color: azure;
   word-spacing: 5px;
-  font-size: 16px;
-  font-family: "Happy Monkey", cursive;
+  font-size: 20px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   font-weight: 800;
+  text-align: center;
   display: inline-block;
   width: 100%;
   height: 50px;

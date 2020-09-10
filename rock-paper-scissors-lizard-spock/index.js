@@ -6,6 +6,9 @@ let charmanderButton = document.getElementById('charmander').onclick = playGame;
 let spockButton = document.getElementById('spock').onclick = playGame;
 
 
+let playerScore = 0;
+let computerScore = 0;
+
 async function playGame () {
     let userChoice = this.id;
     document.getElementById('playerChoice').innerHTML = `You chose ${userChoice}`;
@@ -33,63 +36,87 @@ async function playGame () {
     document.getElementById('result').innerHTML = `${result}`;
 
 function compareChoices (choiceOne, choiceTwo){
+
     if (userChoice === cpuChoice) {
         return "A wild Tie-fighter appeared! It's a draw!";
     }
     if (userChoice === 'rock'){
         if (cpuChoice === 'scissors'){
+            document.getElementById('playerScore').innerHTML = playerScore++;
             return "In a flurry of panic, you throw your rock at your opponent, hitting his knee, tripping him. He falls on his scissors and dies! You win!";
         } else if (cpuChoice === 'charmander'){
+            document.getElementById('playerScore').innerHTML = playerScore++;
             return "You bashed Charmander's head open, you psycho! You win!";
         } else if (cpuChoice === 'paper'){
+            document.getElementById('computerScore').innerHTML = computerScore++;
             return "For some reason, a rock loses to a piece of paper so...you lost!";
         } else {
+            document.getElementById('computerScore').innerHTML = computerScore++;
             return "Spock took your rock and considered it a rubber duck. It's gone now. You lost";
         }
     }
+    console.log(playerScore);
+    console.log(computerScore);
+
 if (userChoice === 'paper'){
     if (cpuChoice === 'rock'){
+        document.getElementById('playerScore').innerHTML = playerScore++;
         return "Puny Rock, it has nothing on your piece of paper. Your piece of paper wraps around the rock and crushes it until all that is left is pebbles. You win!";
     }else if (cpuChoice === 'scissors'){
+        document.getElementById('computerScore').innerHTML = computerScore++;
         return "You're opponent's eyes turn red with rage as he runs towards you, with scissors! Feeling the cold steel piercing your skin, you think to yourself 'He can't run with scissors, that's illegal'. You lost!";
     }else if (cpuChoice === 'charmander'){
+        document.getElementById('computerScore').innerHTML = computerScore++;
         return "You fold the paper into a nice origami flower and give it Charmander, he incinerates you in an instant. You lost."
     } else {
+        document.getElementById('playerScore').innerHTML = playerScore++;
         return "You whip out a pen and start disproving Spock, he can't handle it and fades away into sci-fi history. You win!"
     }
 }
 if (userChoice === 'scissors'){
     if (cpuChoice === 'rock'){
+        document.getElementById('computerScore').innerHTML = computerScore++;
         return "As you start running, he hits your knee with the rock and you fall down. Stabbing yourself in the eye during the fall. You lost. DON'T RUN WITH SCISSORS!"
     }else if (cpuChoice === 'paper'){
+        document.getElementById('playerScore').innerHTML = playerScore++;
         return "'Hahaha, he has a piece of paper!'you think to yourself whilst rushing at your opponent, scissors in hand. Slicing through his paper and skin alike. You win!"
     }else if (cpuChoice === 'charmander'){
+        document.getElementById('computerScore').innerHTML = computerScore++;
         return "'What a cute lizard' are your last thoughts as your skin melts from your bones and the smell of barbeque fills your nose. You lost."
     } else {
+        document.getElementById('computerScore').innerHTML = computerScore++;
         return "You run at Spock, trying to cut him. He disarms you in an instant and Vulcan Chops you to death. You lost."
     }
 }
 if (userChoice === 'charmander'){
     if (cpuChoice === 'rock'){
+        document.getElementById('computerScore').innerHTML = computerScore++;
         return "'Go Charmander!' you shout as you throw your pokéball, Charmander erupts from his podlike prison and lets out a mighty 'Chaaaar!' before falling to the floor. A rock lodged in his forehead. You lost."
     }else if (cpuChoice === 'paper'){
+        document.getElementById('playerScore').innerHTML = playerScore++;
         return "'Charmander, flamethrower!' A stream of fire flies across the field, burning your opponent and his flimsy paper to a crisp. You win!"
     }else if (cpuChoice === 'scissors'){
+        document.getElementById('playerScore').innerHTML = playerScore++;
         return "As you see the madman running towards you with scissors, you whisper sweet nothings in Charmander's ear, which causes him to heat up, releasing a heatwave that melts your opponents into a soup of human residue. You win!"
     }else{
+        document.getElementById('computerScore').innerHTML = computerScore++;
         return "You order Charmander to burn Spock, but it would appear Charmander is part Vulcan and won't attack Spock. Instead they both attack and eat you. You lost."
     }
 }
 if (userChoice === 'spock'){
     if (cpuChoice === 'rock'){
+        document.getElementById('playerScore').innerHTML = playerScore++;
         return "Making use of Spock's fighting abilities, you order him to Rubber Duck your opponent. He's in for a rude awakening. You win!"
     }else if
     (cpuChoice === 'paper'){
-        return "Spock hides behind you. Not sure why, you push him to the front and watch as he suddenly disapears into nothing. Maybe Spock was never real? You lost."
+        document.getElementById('computerScore').innerHTML = computerScore++;
+        return "Spock hides behind you. Not sure why, you push him to the front and watch as he suddenly disappears into nothing. Maybe Spock was never real? You lost."
     }else if
     (cpuChoice === 'scissors'){
+        document.getElementById('playerScore').innerHTML = playerScore++;
         return "Spock takes the lead as he sees your opponent running with scissors. 'Not logical' you hear him saying as he screwdrives the madman into the ground. You win!"
     }else {
+        document.getElementById('playerScore').innerHTML = playerScore++;
         return "Pokemon are part Vulcan, Spock knows that! He beckons Charmander over and together they vaporise your opponent and start snorting the remaining ashes. You win!"
     }
     }
