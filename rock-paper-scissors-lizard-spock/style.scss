@@ -1,15 +1,19 @@
-@mixin content{
-  color: azure;
-  word-spacing: 5px;
+@mixin content {
+  color: rgba(239, 232, 232,);
   font-size: 20px;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 800;
-  text-align: center;
+}
+body{
+  background: radial-gradient(circle, rgba(245,246,249,1) 0%, rgba(212,108,200,0.5788515235195641) 100%);
 }
 
-body{
+.page {
   width: 80%;
   margin: auto;
+  background: radial-gradient(circle, rgba(245,246,249,1) 0%, rgba(212,108,200,0.5788515235195641) 100%);
+  border: 2px solid rgb(15,15,15, 0.5);
+
 }
 
 // HEADER MAKE UP
@@ -27,39 +31,81 @@ body{
   margin-bottom: 10%;
 
 }
-.button:hover{
+
+.button:hover {
   border-radius: 10%;
   transform: scale(1.5) perspective(1px);
 }
 
 
 //GAME RESPONSES
+.responses{
+  text-align: center;
+}
+
+
 #playerChoice {
   @include content;
+  display: table-cell;
   float: left;
-  display: inline-block;
   width: 45%;
-  height: 50px;
-  background-color: lightpink;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #5da81a;
   margin-bottom: 1.5em;
 }
 
 #cpuChoice {
   @include content;
-  display: inline-block;
+  display: table-cell;
+  vertical-align: middle;
   float: right;
   width: 45%;
-  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: cornflowerblue;
   margin-bottom: 1.5em;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 #result {
   @include content;
-  display: inline-block;
+  text-align: center;
   width: 100%;
-  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: orangered;
+  margin-top: 1em;
   margin-bottom: 1.5em;
+}
+//SCOREBOARD
+.scoreboard{
+  width: 100%;
+  display: flex;
+  color: rgba(239, 232, 232);
+  font-size: 30px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 800;
+
+}
+
+#playerScore {
+  float: left;
+  display: flex;
+  width: 99%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+}
+
+#computerScore {
+  float: right;
+  display: flex;
+  width: 1%;
+  margin-bottom: 5%;
+  margin-right: 5%;
 
 }

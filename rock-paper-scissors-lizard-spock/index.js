@@ -55,8 +55,6 @@ function compareChoices (choiceOne, choiceTwo){
             return "Spock took your rock and considered it a rubber duck. It's gone now. You lost";
         }
     }
-    console.log(playerScore);
-    console.log(computerScore);
 
 if (userChoice === 'paper'){
     if (cpuChoice === 'rock'){
