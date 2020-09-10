@@ -1,0 +1,65 @@
+body {
+  width: 80%;
+  margin: auto;
+}
+
+.header {
+  font-family: "Bebas Neue", cursive;
+  font-size: 64px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+.button {
+  margin-left: 8%;
+  margin-bottom: 10%;
+}
+
+.button:hover {
+  border-radius: 10%;
+  transform: scale(1.5) perspective(1px);
+}
+
+#playerChoice {
+  color: azure;
+  word-spacing: 5px;
+  font-size: 16px;
+  font-family: "Happy Monkey", cursive;
+  font-weight: 800;
+  float: left;
+  display: inline-block;
+  width: 45%;
+  height: 50px;
+  background-color: lightpink;
+  margin-bottom: 1.5em;
+}
+
+#cpuChoice {
+  color: azure;
+  word-spacing: 5px;
+  font-size: 16px;
+  font-family: "Happy Monkey", cursive;
+  font-weight: 800;
+  display: inline-block;
+  float: right;
+  width: 45%;
+  height: 50px;
+  background-color: cornflowerblue;
+  margin-bottom: 1.5em;
+}
+
+#result {
+  color: azure;
+  word-spacing: 5px;
+  font-size: 16px;
+  font-family: "Happy Monkey", cursive;
+  font-weight: 800;
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  background-color: orangered;
+  margin-bottom: 1.5em;
+}
+
+/*# sourceMappingURL=style.css.map */
