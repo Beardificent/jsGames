@@ -5,18 +5,6 @@ let scissorsButton = document.getElementById('scissors').onclick = playGame;
 let charmanderButton = document.getElementById('charmander').onclick = playGame;
 let spockButton = document.getElementById('spock').onclick = playGame;
 
-let rock = 'rock';
-let paper ='paper';
-let scissors = 'scissors';
-let charmander = 'charmander';
-let spock = 'spock';
-
-let choices =  {rock : {name: 'rock', defeats : [charmander, scissors] },
-                paper : {name: 'paper', defeats : [rock, spock]},
-                scissors: {name: 'paper', defeats : [paper, charmander]},
-                charmander: {name: 'charmander', defeats : [paper, spock]},
-               spock : {name: 'spock', defeats : [scissors, rock]}
-};
 
 async function playGame () {
     let userChoice = this.id;
@@ -106,5 +94,6 @@ if (userChoice === 'spock'){
     }
     }
 }
+
 
 }
