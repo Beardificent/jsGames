@@ -6,8 +6,8 @@ let charmanderButton = document.getElementById('charmander').onclick = playGame;
 let spockButton = document.getElementById('spock').onclick = playGame;
 
 
-let playerScore = 0;
-let computerScore = 0;
+let playerScore = 1;
+let computerScore = 1;
 
 async function playGame () {
     let userChoice = this.id;
