@@ -10,17 +10,12 @@ let spockButton = document.getElementById('spock').onclick = playGame;
 
 let playerScore = 1;
 let computerScore = 1;
-/*
-function displayOutcome () {
-    document.getElementById('#matchOutcome').style.display="block";
-}
 
- */
 
 //PLAY GAME
 
 
-async function playGame () {
+function playGame () {
 
 
     let userChoice = this.id;
@@ -31,6 +26,7 @@ async function playGame () {
     if (cpuChoice < 0.2) {
         cpuChoice = 'rock';
         document.getElementById('cpuChoice').innerHTML = `Opponent threw a ${cpuChoice}`;
+
     } else if (cpuChoice <= 0.4) {
         cpuChoice = 'paper';
         document.getElementById('cpuChoice').innerHTML = `Opponent came at you with a piece of ${cpuChoice}`;
@@ -54,7 +50,6 @@ async function playGame () {
 function compareChoices (choiceOne, choiceTwo){
 
     //TIE
-
     if (userChoice === cpuChoice) {
         return "A wild Tie-fighter appeared! It's a draw!";
     }
@@ -147,6 +142,19 @@ if (userChoice === 'spock'){
     }
     }
 }
+//DELAYS
+        setTimeout(function(){
+            document.getElementById('playerChoice').style.visibility = "visible";
+        }, 0);
+        setTimeout(function(){
+            document.getElementById('cpuChoice').style.visibility = "visible";
+        },500);
+        setTimeout(function(){
+            document.getElementById('result').style.visibility = "visible";
+        },1000);
+
+
+
 
 
 }
