@@ -81,7 +81,6 @@ body {
 }
 
 .scoreboard {
-  width: 100%;
   display: flex;
   color: #efe8e8;
   font-size: 30px;
@@ -89,29 +88,21 @@ body {
   font-weight: 800;
 }
 
+table {
+  width: 100%;
+}
+
 #playerScore {
-  float: left;
-  display: flex;
-  width: 99%;
-  margin-bottom: 5%;
-  margin-left: 5%;
+  width: 33%;
 }
 
 #computerScore {
-  float: right;
-  display: flex;
-  width: 1%;
-  margin-bottom: 5%;
-  margin-right: 5%;
+  width: 33%;
 }
 
-.resetButton {
-  font-family: "Bebas Neue", cursive;
-  text-transform: uppercase;
-  text-align: right;
-  width: 100%;
-  background-color: rgba(250, 246, 246, 0.2);
-  border: none;
+#rounds {
+  color: rgba(238, 2, 2, 0.5);
+  width: 33%;
 }
 
 /*# sourceMappingURL=style.css.map */
