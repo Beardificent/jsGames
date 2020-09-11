@@ -6,15 +6,13 @@ let scissorsButton = document.getElementById('scissors').onclick = playGame;
 let charmanderButton = document.getElementById('charmander').onclick = playGame;
 let spockButton = document.getElementById('spock').onclick = playGame;
 
-
+//INITIAL SCORING (HIDES SCORE UNTIL 1 POINT HAS BEEN MADE)
 
 let playerScore = 1;
 let computerScore = 1;
 
 
 //PLAY GAME
-
-
 function playGame () {
 
 
@@ -70,7 +68,6 @@ function compareChoices (choiceOne, choiceTwo){
             return "Spock took your rock and considered it a rubber duck. It's gone now. You lost";
         }
     }
-
     //PLAYER CHOICE PAPER
 
 if (userChoice === 'paper'){
@@ -159,3 +156,12 @@ if (userChoice === 'spock'){
 
 }
 
+
+//RESET BUTTON
+const refreshButton = document.querySelector('.resetButton');
+
+const refreshPage = () => {
+    location.reload();
+}
+
+refreshButton.addEventListener('click', refreshPage);
