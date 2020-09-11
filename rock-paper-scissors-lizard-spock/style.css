@@ -4,6 +4,10 @@
   }
 }
 @media only screen and (max-width: 320px) {
+  .page {
+    vw: 100%;
+  }
+
   #playerScore, #computerScore {
     font-size: 10px;
   }
