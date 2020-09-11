@@ -4,8 +4,12 @@
   }
 }
 @media only screen and (max-width: 320px) {
-  #rounds, #playerScore, #computerScore {
+  #playerScore, #computerScore {
     font-size: 10px;
+  }
+
+  #rounds {
+    font-size: 6px;
   }
 }
 body {
