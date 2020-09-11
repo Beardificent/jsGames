@@ -1,3 +1,4 @@
+//BUTTONS
 
 let rockButton = document.getElementById('rock').onclick = playGame;
 let paperButton = document.getElementById('paper').onclick = playGame;
@@ -6,10 +7,22 @@ let charmanderButton = document.getElementById('charmander').onclick = playGame;
 let spockButton = document.getElementById('spock').onclick = playGame;
 
 
+
 let playerScore = 1;
 let computerScore = 1;
+/*
+function displayOutcome () {
+    document.getElementById('#matchOutcome').style.display="block";
+}
+
+ */
+
+//PLAY GAME
+
 
 async function playGame () {
+
+
     let userChoice = this.id;
     document.getElementById('playerChoice').innerHTML = `You chose ${userChoice}`;
 
@@ -31,15 +44,22 @@ async function playGame () {
         cpuChoice = 'spock';
         document.getElementById('cpuChoice').innerHTML = `Opponent beamed down ${cpuChoice}`;
     }
+
+    //WIN OR LOSE
+    //displayOutcome()
     let result = compareChoices()
     //TRYOUT = Get result printed in result div
     document.getElementById('result').innerHTML = `${result}`;
 
 function compareChoices (choiceOne, choiceTwo){
 
+    //TIE
+
     if (userChoice === cpuChoice) {
         return "A wild Tie-fighter appeared! It's a draw!";
     }
+    //PLAYER CHOICE ROCK
+
     if (userChoice === 'rock'){
         if (cpuChoice === 'scissors'){
             document.getElementById('playerScore').innerHTML = playerScore++;
@@ -56,6 +76,8 @@ function compareChoices (choiceOne, choiceTwo){
         }
     }
 
+    //PLAYER CHOICE PAPER
+
 if (userChoice === 'paper'){
     if (cpuChoice === 'rock'){
         document.getElementById('playerScore').innerHTML = playerScore++;
@@ -71,6 +93,8 @@ if (userChoice === 'paper'){
         return "You whip out a pen and start disproving Spock, he can't handle it and fades away into sci-fi history. You win!"
     }
 }
+
+//PLAYER CHOICE SCISSORS
 if (userChoice === 'scissors'){
     if (cpuChoice === 'rock'){
         document.getElementById('computerScore').innerHTML = computerScore++;
@@ -86,6 +110,8 @@ if (userChoice === 'scissors'){
         return "You run at Spock, trying to cut him. He disarms you in an instant and Vulcan Chops you to death. You lost."
     }
 }
+
+//PLAYER CHOICE LIZARD/CHARMANDER
 if (userChoice === 'charmander'){
     if (cpuChoice === 'rock'){
         document.getElementById('computerScore').innerHTML = computerScore++;
@@ -101,6 +127,8 @@ if (userChoice === 'charmander'){
         return "You order Charmander to burn Spock, but it would appear Charmander is part Vulcan and won't attack Spock. Instead they both attack and eat you. You lost."
     }
 }
+
+//PLAYER CHOICE SPOCK
 if (userChoice === 'spock'){
     if (cpuChoice === 'rock'){
         document.getElementById('playerScore').innerHTML = playerScore++;
@@ -122,3 +150,4 @@ if (userChoice === 'spock'){
 
 
 }
+
