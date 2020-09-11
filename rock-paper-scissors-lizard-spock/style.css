@@ -4,7 +4,7 @@ body {
 
 .page {
   width: 80%;
-  margin: auto;
+  margin: 10px auto 10px auto;
   background: radial-gradient(circle, #f5f6f9 0%, rgba(212, 108, 200, 0.5788515235) 100%);
   border: 2px solid rgba(15, 15, 15, 0.5);
 }
